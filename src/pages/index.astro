@@ -1,6 +1,5 @@
 ---
-// import '../styles/certs.css';
-// import '../styles/global.css';
+import Logo from '../components/Logo.astro';  // Tweak path if not src/pages/index.astro sibling
 ---
 
 <head>
@@ -9,20 +8,18 @@
   <title>Roby Engineering™—Vis per Scientiam: Builders of Badass Sites</title>
   <link rel="stylesheet" href="/styles/certs.css" />
   <link rel="stylesheet" href="/styles/global.css" />
-  
-
 </head>
-<div class="hero">
-  <h1>Roby Engineering™— Builder of Badass Sites</h1>
-  <h2>Vis per Scientiam</h2>
-  <p>React | Astro | Python Proficiencies</p>
-</div>
+
+
+  <Logo />  <!-- Boom -->
+ 
+
 <section class="portfolio">
-	<div class="card">
-  <h2>TVQMA Race League Site</h2>
-  <p>Single-page React app for Tri Valley Quarter Midget Association—race schedules, live results, CSV uploads. Bootstrapped with Vite, hooks, Router, Bootstrap 5. Lighthouse 90+ scores.</p>
-  <a href="https://tvqma-demo.netlify.app">Live Demo</a>
-</div>
+  <div class="card">
+    <h2>TVQMA Race League Site</h2>
+    <p>Single-page React app for Tri Valley Quarter Midget Association—race schedules, live results, CSV uploads. Bootstrapped with Vite, hooks, Router, Bootstrap 5. Lighthouse 90+ scores.</p>
+    <a href="https://tvqma-demo.netlify.app">Live Demo</a>
+  </div>
   <div class="card">
     <h2>Rollins Racing Sponsor Site</h2>
     <p>Astro/Tina/TS beast—CMS for non-tech edits.</p>
@@ -30,6 +27,7 @@
   </div>
   <!-- Stub more: TVQMA, etc -->
 </section>
+
 <section class="certs">
   <h2>Certifications</h2>
   <ul>
@@ -37,9 +35,10 @@
     <!-- Add Net+ stub when nailed -->
   </ul>
 </section>
+
 <section class="contact">
   <form>
     <input type="email" placeholder="Hit me up" />
     <button>Send</button>
   </form>
-</section>	
+</section>
