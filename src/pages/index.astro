@@ -1,44 +1,320 @@
 ---
-import Logo from '../components/Logo.astro';  // Tweak path if not src/pages/index.astro sibling
+// index.astro - NEW STRUCTURE
 ---
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Roby Engineering™—Vis per Scientiam: Builders of Badass Sites</title>
-  <link rel="stylesheet" href="/styles/certs.css" />
+  <!-- Your glassy CSS stays -->
   <link rel="stylesheet" href="/styles/global.css" />
 </head>
 
+<!-- FLOATING SKULL WATERMARK -->
+<div class="skull-watermark">
+  <img src="/roby-skull.png" alt="" />
+</div>
 
-  <Logo />  <!-- Boom -->
- 
+<!-- STICKY NAV (appears on scroll) -->
+<nav class="sticky-nav">
+  <img src="/roby-skull.png" alt="Roby Engineering" class="nav-logo" />
+  <span>Roby Engineering</span>
+</nav>
 
-<section class="portfolio">
+<!-- HERO: Clean, No Redundancy -->
+<section class="hero">
+  <h1>Dillan Roby</h1>
+  <h2>Infrastructure Engineer & Full-Stack Developer</h2>
+  <p class="tagline">Vis per Scientiam — Power Through Knowledge</p>
+  <div class="cta-buttons">
+    <a href="#labs" class="cta-primary">IT Labs</a>
+    <a href="#web-dev" class="cta-secondary">Web Projects</a>
+  </div>
+</section>
+
+<!-- WEB DEVELOPMENT SECTION -->
+<section id="web-dev" class="portfolio">
+  <h2>Web Development</h2>
   <div class="card">
-    <h2>TVQMA Race League Site</h2>
-    <p>Single-page React app for Tri Valley Quarter Midget Association—race schedules, live results, CSV uploads. Bootstrapped with Vite, hooks, Router, Bootstrap 5. Lighthouse 90+ scores.</p>
+    <h3>TVQMA Race League</h3>
+    <p>Full-stack React app: race schedules, live results, CSV uploads. Vite, Router, Bootstrap 5. <strong>Lighthouse 90+</strong>.</p>
+    <div class="tech-stack">React • Vite • Bootstrap • CSV Parser</div>
     <a href="https://tvqma-demo.netlify.app">Live Demo</a>
   </div>
+  
   <div class="card">
-    <h2>Rollins Racing Sponsor Site</h2>
-    <p>Astro/Tina/TS beast—CMS for non-tech edits.</p>
-    <a href="https://ava-rollins-racing.netlify.app/">Live</a>
+    <h3>Rollins Racing Sponsor Site</h3>
+    <p>Astro + TinaCMS + TypeScript. <strong>Headless CMS</strong> for non-tech client edits.</p>
+    <div class="tech-stack">Astro • TinaCMS • TypeScript</div>
+    <a href="https://ava-rollins-racing.netlify.app/">Live Site</a>
   </div>
-  <!-- Stub more: TVQMA, etc -->
+  
+  <!-- ADD PORT SCANNER HERE -->
+  <div class="card">
+    <h3>Network Port Scanner</h3>
+    <p>Python CLI tool for network reconnaissance. Multi-threaded scanning, port enumeration.</p>
+    <div class="tech-stack">Python • Socket Programming • Threading</div>
+    <a href="https://github.com/DillanR1/port-scanner">GitHub</a>
+  </div>
 </section>
 
+<!-- IT INFRASTRUCTURE LABS -->
+<section id="labs" class="portfolio">
+  <h2>IT Infrastructure Labs</h2>
+  <p class="section-intro">
+    Enterprise-grade deployments demonstrating systems administration, virtualization, and automation skills.
+    <strong>Built for technical hiring managers and IT recruiters.</strong>
+  </p>
+  
+  <div class="card">
+    <h3>Active Directory Domain Deployment</h3>
+    <p>Windows Server 2022 forest configuration, PowerShell automation, Hyper-V networking, DNS/DHCP integration.</p>
+    <div class="skills-tags">
+      <span>Active Directory</span>
+      <span>PowerShell</span>
+      <span>Hyper-V</span>
+      <span>Windows Server</span>
+      <span>DNS/DHCP</span>
+    </div>
+    <a href="/labs/active-directory">View Lab</a>
+  </div>
+  
+  <div class="card">
+    <h3>osTicket on Linux (LAMP Stack)</h3>
+    <p>Full LAMP deployment: Ubuntu Server, Apache, MySQL, PHP. Database security, web server hardening.</p>
+    <div class="skills-tags">
+      <span>Linux</span>
+      <span>Apache</span>
+      <span>MySQL</span>
+      <span>PHP</span>
+      <span>Security Hardening</span>
+    </div>
+    <a href="/labs/osticket">View Lab</a>
+  </div>
+  
+  <div class="card">
+    <h3>Windows 11 Hyper-V Deployment</h3>
+    <p>Generation 2 VM with TPM/Secure Boot, external networking, boot order management, WSL2 conflict resolution.</p>
+    <div class="skills-tags">
+      <span>Hyper-V</span>
+      <span>Windows 11</span>
+      <span>Virtualization</span>
+      <span>Troubleshooting</span>
+    </div>
+    <a href="/labs/windows11-vm">View Lab</a>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
 <section class="certs">
-  <h2>Certifications</h2>
+  <h2>Certifications & Skills</h2>
   <ul>
-    <li>CompTIA A+ Certified (Core 1 & 2)—Hardware/Software Troubleshooting, Networking Basics</li>
-    <!-- Add Net+ stub when nailed -->
+    <li><strong>CompTIA A+</strong> — Hardware/Software Troubleshooting, Networking Fundamentals</li>
+    <li><strong>In Progress:</strong> CompTIA Network+, Security+</li>
   </ul>
+  
+  <div class="skills-grid">
+    <div class="skill-category">
+      <h3>Systems Administration</h3>
+      <p>Active Directory, Windows Server, Linux (Ubuntu), Hyper-V, VMware concepts</p>
+    </div>
+    <div class="skill-category">
+      <h3>Scripting & Automation</h3>
+      <p>PowerShell, Bash, Python, Infrastructure-as-Code principles</p>
+    </div>
+    <div class="skill-category">
+      <h3>Web Development</h3>
+      <p>React, Astro, TypeScript, Node.js, REST APIs, Headless CMS</p>
+    </div>
+    <div class="skill-category">
+      <h3>Networking</h3>
+      <p>TCP/IP, DNS, DHCP, Firewall configuration, Virtual switches, Network troubleshooting</p>
+    </div>
+  </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact">
-  <form>
-    <input type="email" placeholder="Hit me up" />
-    <button>Send</button>
+  <h2>Let's Build Something</h2>
+  <form data-netlify="true" name="contact">
+    <input type="text" name="name" placeholder="Name" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <textarea name="message" placeholder="Project details or job opportunity..." required></textarea>
+    <button type="submit">Send Message</button>
   </form>
 </section>
+
+<style>
+  /* SKULL WATERMARK */
+  .skull-watermark {
+    position: fixed;
+    bottom: -10%;
+    right: -5%;
+    width: 400px;
+    opacity: 0.08;
+    z-index: 0;
+    pointer-events: none;
+    animation: float 20s ease-in-out infinite;
+  }
+  
+  .skull-watermark img {
+    width: 100%;
+    filter: drop-shadow(0 0 60px rgba(255, 102, 0, 0.3));
+  }
+  
+  /* STICKY NAV */
+  .sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 102, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 1000;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .sticky-nav.visible {
+    transform: translateY(0);
+  }
+  
+  .nav-logo {
+    width: 40px;
+    height: auto;
+  }
+  
+  .sticky-nav span {
+    font-weight: 700;
+    color: #fff;
+    font-size: 1.1rem;
+  }
+  
+  /* CTA BUTTONS */
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .cta-primary, .cta-secondary {
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-primary {
+    background: linear-gradient(135deg, rgba(255, 102, 0, 0.3), rgba(255, 102, 0, 0.4));
+    border: 1px solid rgba(255, 102, 0, 0.5);
+    color: #ff6600;
+  }
+  
+  .cta-primary:hover {
+    background: linear-gradient(135deg, rgba(255, 102, 0, 0.4), rgba(255, 102, 0, 0.5));
+    box-shadow: 0 0 40px rgba(255, 102, 0, 0.4);
+  }
+  
+  .cta-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+  
+  .cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  /* TECH STACK & SKILLS TAGS */
+  .tech-stack, .skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+  }
+  
+  .tech-stack {
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+  }
+  
+  .skills-tags span {
+    background: rgba(255, 102, 0, 0.15);
+    border: 1px solid rgba(255, 102, 0, 0.3);
+    padding: 0.35rem 0.75rem;
+    border-radius: 0.5rem;
+    color: #ff8833;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .skills-tags span:hover {
+    background: rgba(255, 102, 0, 0.25);
+    border-color: rgba(255, 102, 0, 0.5);
+    transform: translateY(-2px);
+  }
+  
+  /* SKILLS GRID */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .skill-category {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .skill-category h3 {
+    color: #ff6600;
+    margin-top: 0;
+    font-size: 1.2rem;
+  }
+  
+  .skill-category p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin: 0.5rem 0 0 0;
+  }
+  
+  /* SECTION INTRO */
+  .section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+  }
+  
+  .section-intro strong {
+    color: #ff6600;
+  }
+</style>
+
+<script>
+  // Sticky nav on scroll
+  const nav = document.querySelector('.sticky-nav');
+  window.addEventListener('scroll', () => {
+    if (nav) {
+      if (window.scrollY > 200) {
+        nav.classList.add('visible');
+      } else {
+        nav.classList.remove('visible');
+      }
+    }
+  });
+</script>
