@@ -1,0 +1,859 @@
+---
+// /projects/index.astro - Web Development & Software Engineering Hub
+// SEO-optimized for: Full-Stack Developer, React Developer, JavaScript Developer,
+// Applications Developer, Frontend Engineer, Web Developer portfolio
+
+const meta = {
+  title: "Web Development Projects | Dillan Roby - Full-Stack Developer Portfolio",
+  description: "Full-stack web development portfolio: React applications, Astro sites with headless CMS, Python automation tools. Production-deployed client projects with modern tech stacks. JavaScript, TypeScript, REST APIs.",
+  keywords: "React developer portfolio, full-stack developer, JavaScript developer, web developer portfolio, Astro framework, headless CMS, TinaCMS, Vite, Bootstrap, TypeScript, REST API, frontend developer, applications developer, Python developer, CSS, responsive design, Netlify deployment",
+  author: "Dillan Roby",
+  url: "https://roby-engineering.netlify.app/projects"
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>{meta.title}</title>
+  <meta name="title" content={meta.title} />
+  <meta name="description" content={meta.description} />
+  <meta name="keywords" content={meta.keywords} />
+  <meta name="author" content={meta.author} />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={meta.url} />
+  <meta property="og:title" content={meta.title} />
+  <meta property="og:description" content={meta.description} />
+  <meta property="og:image" content="https://roby-engineering.netlify.app/og-images/projects-overview.png" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={meta.url} />
+  <meta property="twitter:title" content={meta.title} />
+  <meta property="twitter:description" content={meta.description} />
+  <meta property="twitter:image" content="https://roby-engineering.netlify.app/og-images/projects-overview.png" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href={meta.url} />
+  
+  <!-- Structured Data for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Dillan Roby",
+      "jobTitle": "Full-Stack Developer & Infrastructure Engineer",
+      "description": "Full-stack developer with production experience in React, Astro, TypeScript, and Python. Builds responsive web applications with modern frameworks and headless CMS integrations.",
+      "url": "https://roby-engineering.netlify.app",
+      "sameAs": [
+        "https://github.com/DillanR1",
+        "https://www.linkedin.com/in/dillan-roby/"
+      ],
+      "knowsAbout": [
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "Astro Framework",
+        "Node.js",
+        "Python",
+        "REST APIs",
+        "Headless CMS",
+        "TinaCMS",
+        "CSS/Bootstrap",
+        "Responsive Design",
+        "Git/GitHub",
+        "Netlify Deployment"
+      ]
+    }
+  }
+  </script>
+  
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+
+<body>
+  <!-- FLOATING SKULL WATERMARK -->
+  <div class="skull-watermark">
+    <img src="/roby-skull.png" alt="" />
+  </div>
+
+  <!-- STICKY NAV -->
+  <nav class="sticky-nav visible">
+    <a href="/" class="nav-brand">Roby Engineering</a>
+    <div class="nav-links">
+      <a href="/projects" class="active">Dev</a>
+      <a href="/labs">IT Labs</a>
+      <a href="/#certs">Certs</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero projects-hero">
+    <h1>Web Development</h1>
+    <p class="hero-subtitle">Production Sites. Client Projects. Modern Tech Stacks.</p>
+    <p class="tagline">
+      <span class="latin">Full-Stack Development with Real-World Deployment</span>
+    </p>
+  </section>
+
+  <!-- RECRUITER HOOK -->
+  <section class="recruiter-section">
+    <div class="recruiter-hook">
+      <h2>For Hiring Managers: What These Projects Demonstrate</h2>
+      <div class="hook-grid">
+        <div class="hook-card">
+          <h3>⚛️ Not Just Tutorial Projects</h3>
+          <p><strong>Typical candidate:</strong> "I built a todo app following a YouTube tutorial."</p>
+          <p><strong>What I shipped:</strong> Production React application for an active racing league—handling real data, real users, and real deadlines. Lighthouse 90+ scores.</p>
+        </div>
+        <div class="hook-card">
+          <h3>🎯 Client-Focused Development</h3>
+          <p><strong>Typical candidate:</strong> "I understand user requirements."</p>
+          <p><strong>What I delivered:</strong> Headless CMS integration so a non-technical client can update their own sponsorship site without touching code. That's understanding users.</p>
+        </div>
+        <div class="hook-card">
+          <h3>🔧 Full-Stack Mindset</h3>
+          <p><strong>Typical candidate:</strong> Knows frontend OR backend.</p>
+          <p><strong>What I build:</strong> Frontend (React, Astro), data handling (CSV parsing, REST APIs), automation (Python scripting), and deployment (Netlify, Git workflows).</p>
+        </div>
+      </div>
+      <p class="hook-summary">
+        <strong>Translation:</strong> I ship production code that solves real problems. 
+        Whether the role is Frontend Developer, Full-Stack Engineer, Applications Developer, or Web Developer, 
+        I've already proven I can deliver working software to real users.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJECT CARDS -->
+  <section class="portfolio projects-portfolio">
+    <h2>Featured Projects</h2>
+    
+    <div class="portfolio-grid">
+      <!-- TVQMA -->
+      <article class="card project-card">
+        <div class="project-header">
+          <span class="project-badge">Client Project</span>
+          <h3>TVQMA Race League</h3>
+        </div>
+        <p>Full-stack React application for Tri Valley Quarter Midget Association. Live race schedules, results tracking, CSV data uploads for race officials, and mobile-responsive design. <strong>Lighthouse Performance: 90+</strong></p>
+        
+        <div class="tech-tags">
+          <span class="tech-tag primary">React</span>
+          <span class="tech-tag primary">JavaScript</span>
+          <span class="tech-tag">Vite</span>
+          <span class="tech-tag">React Router</span>
+          <span class="tech-tag">Bootstrap 5</span>
+          <span class="tech-tag">CSV Parser</span>
+          <span class="tech-tag">Responsive Design</span>
+        </div>
+        
+        <div class="project-highlights">
+          <h4>Key Features:</h4>
+          <ul>
+            <li>Dynamic race schedule management</li>
+            <li>CSV upload/parsing for race results</li>
+            <li>Mobile-first responsive layout</li>
+            <li>Client-side routing with React Router</li>
+          </ul>
+        </div>
+        
+        <div class="project-links">
+          <a href="https://tvqma-demo.netlify.app" target="_blank" rel="noopener" class="cta-primary">Live Demo</a>
+          <a href="https://github.com/DillanR1/TVQMA-Prototype" target="_blank" rel="noopener" class="cta-secondary">GitHub</a>
+        </div>
+      </article>
+      
+      <!-- ROLLINS RACING -->
+      <article class="card project-card">
+        <div class="project-header">
+          <span class="project-badge">Client Project</span>
+          <h3>Rollins Racing Sponsor Site</h3>
+        </div>
+        <p>Sponsorship platform for junior quarter midget racer. Built with Astro for static performance and TinaCMS for headless content management—allowing a non-technical client to update content without developer intervention.</p>
+        
+        <div class="tech-tags">
+          <span class="tech-tag primary">Astro</span>
+          <span class="tech-tag primary">TypeScript</span>
+          <span class="tech-tag">TinaCMS</span>
+          <span class="tech-tag">Headless CMS</span>
+          <span class="tech-tag">Markdown</span>
+          <span class="tech-tag">Netlify</span>
+        </div>
+        
+        <div class="project-highlights">
+          <h4>Key Features:</h4>
+          <ul>
+            <li>Headless CMS for non-technical editing</li>
+            <li>Static site generation for speed</li>
+            <li>Sponsorship tier display system</li>
+            <li>Integrated payment links (Venmo)</li>
+          </ul>
+        </div>
+        
+        <div class="project-links">
+          <a href="https://ava-rollins-racing.netlify.app/" target="_blank" rel="noopener" class="cta-primary">Live Site</a>
+          <a href="https://github.com/DillanR1" target="_blank" rel="noopener" class="cta-secondary">GitHub</a>
+        </div>
+      </article>
+      
+      <!-- PORT SCANNER -->
+      <article class="card project-card">
+        <div class="project-header">
+          <span class="project-badge">Developer Tool</span>
+          <h3>Network Port Scanner</h3>
+        </div>
+        <p>Multi-threaded Python CLI tool for network reconnaissance. Demonstrates socket programming, threading for performance, and practical security/networking knowledge that bridges development and IT infrastructure.</p>
+        
+        <div class="tech-tags">
+          <span class="tech-tag primary">Python</span>
+          <span class="tech-tag">Socket Programming</span>
+          <span class="tech-tag">Threading</span>
+          <span class="tech-tag">CLI Design</span>
+          <span class="tech-tag">Networking</span>
+        </div>
+        
+        <div class="project-highlights">
+          <h4>Key Features:</h4>
+          <ul>
+            <li>Multi-threaded scanning for speed</li>
+            <li>Port range specification</li>
+            <li>Service identification</li>
+            <li>Clean CLI interface</li>
+          </ul>
+        </div>
+        
+        <div class="project-links">
+          <a href="https://github.com/DillanR1/PortScanner" target="_blank" rel="noopener" class="cta-primary">GitHub Repo</a>
+        </div>
+      </article>
+      
+      <!-- THIS PORTFOLIO -->
+      <article class="card project-card">
+        <div class="project-header">
+          <span class="project-badge">Personal Project</span>
+          <h3>Roby Engineering Portfolio</h3>
+        </div>
+        <p>You're looking at it. Custom Astro site with glassy UI design, SEO optimization, structured data markup, and multi-page architecture. Built to funnel recruiters to relevant content—IT labs or web development—based on their needs.</p>
+        
+        <div class="tech-tags">
+          <span class="tech-tag primary">Astro</span>
+          <span class="tech-tag primary">CSS</span>
+          <span class="tech-tag">SEO</span>
+          <span class="tech-tag">Responsive Design</span>
+          <span class="tech-tag">Netlify</span>
+          <span class="tech-tag">Schema.org</span>
+        </div>
+        
+        <div class="project-highlights">
+          <h4>Key Features:</h4>
+          <ul>
+            <li>Custom glass-morphism UI design</li>
+            <li>Multi-page static site architecture</li>
+            <li>SEO-optimized with structured data</li>
+            <li>Mobile-first responsive design</li>
+          </ul>
+        </div>
+        
+        <div class="project-links">
+          <a href="https://github.com/DillanR1/Roby-Engineering" target="_blank" rel="noopener" class="cta-primary">GitHub Repo</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- TECH STACK MATRIX -->
+  <section class="certs tech-matrix">
+    <h2>Technical Stack</h2>
+    
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Frontend</h3>
+        <ul class="skill-list">
+          <li>React / React Router</li>
+          <li>Astro Framework</li>
+          <li>JavaScript (ES6+)</li>
+          <li>TypeScript</li>
+          <li>HTML5 / CSS3</li>
+          <li>Bootstrap / Tailwind</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Backend & Data</h3>
+        <ul class="skill-list">
+          <li>Node.js</li>
+          <li>Python</li>
+          <li>REST APIs</li>
+          <li>CSV/JSON Data Handling</li>
+          <li>Headless CMS (TinaCMS)</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Tools & Workflow</h3>
+        <ul class="skill-list">
+          <li>Git / GitHub</li>
+          <li>VS Code</li>
+          <li>Vite Build Tool</li>
+          <li>npm / Package Management</li>
+          <li>Chrome DevTools</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Deployment & DevOps</h3>
+        <ul class="skill-list">
+          <li>Netlify</li>
+          <li>GitHub Actions (CI/CD concepts)</li>
+          <li>Domain Configuration</li>
+          <li>SSL/HTTPS</li>
+          <li>Performance Optimization</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALSO SKILLED IN IT -->
+  <section class="portfolio also-section">
+    <div class="also-hook">
+      <h2>Also: IT Infrastructure Background</h2>
+      <p>My web development skills are complemented by hands-on IT infrastructure experience. I understand the systems that web applications run on—servers, networking, security, automation.</p>
+      <a href="/labs" class="explore-cta">
+        <span>Explore IT Labs</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="contact projects-cta">
+    <h2>Let's Build Something Together</h2>
+    <p>Looking for a developer who ships production code? I've already done it—for real clients with real deadlines.</p>
+    <div class="cta-buttons">
+      <a href="/#contact" class="cta-primary">Get in Touch</a>
+      <a href="https://github.com/DillanR1" target="_blank" rel="noopener" class="cta-secondary">View All Repos on GitHub</a>
+    </div>
+  </section>
+
+  <style>
+    /* SKULL WATERMARK */
+    .skull-watermark {
+      position: fixed;
+      top: 60vh;
+      right: -8%;
+      width: 500px;
+      opacity: 0.05;
+      z-index: -1;
+      pointer-events: none;
+      animation: skull-drift 25s ease-in-out infinite;
+    }
+    
+    .skull-watermark img {
+      width: 100%;
+      filter: drop-shadow(0 0 80px rgba(255, 102, 0, 0.25));
+    }
+    
+    @keyframes skull-drift {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.05; }
+      50% { transform: translate(-30px, -40px) rotate(3deg); opacity: 0.07; }
+    }
+    
+    /* STICKY NAV */
+    .sticky-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0.75rem 2rem;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(255, 102, 0, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      transform: translateY(0);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      box-sizing: border-box;
+    }
+    
+    .nav-brand {
+      font-weight: 700;
+      color: #fff;
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-brand:hover {
+      color: #ff6600;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .nav-links a.active {
+      color: #ff6600;
+    }
+    
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #ff6600;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ff6600;
+    }
+    
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+    
+    /* HERO */
+    .projects-hero {
+      margin-top: 4rem;
+      padding-top: 3rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.3rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0.5rem 0 1rem 0;
+      font-weight: 400;
+    }
+    
+    .tagline .latin {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ff6600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    
+    /* RECRUITER SECTION */
+    .recruiter-section {
+      max-width: 80rem;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    
+    .recruiter-hook {
+      background: rgba(255, 102, 0, 0.05);
+      border: 1px solid rgba(255, 102, 0, 0.2);
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+    }
+    
+    .recruiter-hook h2 {
+      color: #ff6600;
+      margin-top: 0;
+      font-size: 1.75rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .recruiter-hook h2::after {
+      display: none;
+    }
+    
+    .hook-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .hook-card {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 1.5rem;
+    }
+    
+    .hook-card h3 {
+      color: #fff;
+      font-size: 1.1rem;
+      margin: 0 0 1rem 0;
+    }
+    
+    .hook-card p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0.5rem 0;
+    }
+    
+    .hook-card strong {
+      color: #ff6600;
+    }
+    
+    .hook-summary {
+      text-align: center;
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.7;
+      margin: 0;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .hook-summary strong {
+      color: #ff6600;
+    }
+    
+    /* PROJECT CARDS */
+    .projects-portfolio {
+      text-align: center;
+    }
+    
+    .project-card {
+      text-align: left;
+    }
+    
+    .project-header {
+      margin-bottom: 1rem;
+    }
+    
+    .project-badge {
+      display: inline-block;
+      background: rgba(255, 102, 0, 0.2);
+      border: 1px solid rgba(255, 102, 0, 0.4);
+      color: #ff6600;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .project-header h3 {
+      color: #fff;
+      font-size: 1.4rem;
+      margin: 0.5rem 0 0 0;
+    }
+    
+    /* TECH TAGS */
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+    
+    .tech-tag {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 0.35rem 0.75rem;
+      border-radius: 0.5rem;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    
+    .tech-tag.primary {
+      background: rgba(255, 102, 0, 0.15);
+      border-color: rgba(255, 102, 0, 0.4);
+      color: #ff8833;
+      font-weight: 700;
+    }
+    
+    /* PROJECT HIGHLIGHTS */
+    .project-highlights {
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 0.75rem;
+      border-left: 3px solid rgba(255, 102, 0, 0.5);
+    }
+    
+    .project-highlights h4 {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.9rem;
+      margin: 0 0 0.75rem 0;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    .project-highlights ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .project-highlights li {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.9rem;
+      padding: 0.3rem 0;
+      padding-left: 1.25rem;
+      position: relative;
+    }
+    
+    .project-highlights li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #ff6600;
+    }
+    
+    /* PROJECT LINKS */
+    .project-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .project-links .cta-primary,
+    .project-links .cta-secondary {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.85rem;
+      text-align: center;
+      flex: 1;
+      min-width: 120px;
+    }
+    
+    /* TECH MATRIX */
+    .tech-matrix .skills-grid {
+      text-align: left;
+    }
+    
+    .skill-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0 0;
+    }
+    
+    .skill-list li {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95rem;
+      padding: 0.4rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    
+    .skill-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #ff6600;
+    }
+    
+    /* ALSO SECTION */
+    .also-section {
+      text-align: center;
+      max-width: 700px;
+    }
+    
+    .also-hook {
+      padding: 2rem;
+    }
+    
+    .also-hook h2 {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 1rem;
+    }
+    
+    .also-hook h2::after {
+      display: none;
+    }
+    
+    .also-hook p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    
+    .explore-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, rgba(255, 102, 0, 0.15), rgba(255, 102, 0, 0.25));
+      border: 2px solid rgba(255, 102, 0, 0.5);
+      border-radius: 3rem;
+      color: #ff6600;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: all 0.3s ease;
+    }
+    
+    .explore-cta:hover {
+      background: linear-gradient(135deg, rgba(255, 102, 0, 0.25), rgba(255, 102, 0, 0.35));
+      border-color: #ff6600;
+      box-shadow: 0 0 30px rgba(255, 102, 0, 0.4);
+      transform: translateY(-2px);
+    }
+    
+    .explore-cta svg {
+      transition: transform 0.3s ease;
+    }
+    
+    .explore-cta:hover svg {
+      transform: translateX(4px);
+    }
+    
+    /* PROJECTS CTA */
+    .projects-cta {
+      text-align: center;
+      max-width: 700px;
+    }
+    
+    .projects-cta p {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 1.5rem;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .cta-primary, .cta-secondary {
+      padding: 1rem 2rem;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+    
+    .cta-primary {
+      background: linear-gradient(135deg, rgba(255, 102, 0, 0.3), rgba(255, 102, 0, 0.4));
+      border: 1px solid rgba(255, 102, 0, 0.5);
+      color: #ff6600;
+    }
+    
+    .cta-primary:hover {
+      background: linear-gradient(135deg, rgba(255, 102, 0, 0.4), rgba(255, 102, 0, 0.5));
+      box-shadow: 0 0 40px rgba(255, 102, 0, 0.4);
+      transform: translateY(-2px);
+    }
+    
+    .cta-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+    
+    .cta-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: translateY(-2px);
+    }
+    
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .sticky-nav {
+        padding: 0.6rem 1rem;
+      }
+      
+      .nav-links {
+        gap: 0.75rem;
+      }
+      
+      .nav-links a {
+        font-size: 0.8rem;
+      }
+      
+      .projects-hero {
+        margin-top: 3.5rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .recruiter-hook {
+        padding: 1.5rem;
+      }
+      
+      .hook-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .project-links {
+        flex-direction: column;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      .skull-watermark {
+        width: 350px;
+        right: -15%;
+      }
+      
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

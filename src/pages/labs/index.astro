@@ -1,0 +1,664 @@
+---
+// /labs/index.astro - IT Infrastructure Labs Hub
+// SEO-optimized for: IT Infrastructure Engineer, Systems Administrator, 
+// Junior Sysadmin, Help Desk to Sysadmin transition, PowerShell automation,
+// Active Directory portfolio, LAMP stack deployment
+
+const meta = {
+  title: "IT Infrastructure Labs | Dillan Roby - Systems Engineer Portfolio",
+  description: "Enterprise-grade IT infrastructure projects: Active Directory deployment with PowerShell automation, LAMP stack osTicket ticketing system, Hyper-V virtualization. A+ certified, targeting Systems Administrator and IT Infrastructure Engineer roles.",
+  keywords: "Active Directory portfolio, PowerShell automation, Hyper-V lab, Windows Server 2022, LAMP stack deployment, osTicket installation, IT infrastructure engineer, systems administrator portfolio, junior sysadmin, help desk to sysadmin, CompTIA A+ certified, IT lab projects, infrastructure automation, DNS DHCP configuration, Linux server administration",
+  author: "Dillan Roby",
+  url: "https://roby-engineering.netlify.app/labs"
+}
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>{meta.title}</title>
+  <meta name="title" content={meta.title} />
+  <meta name="description" content={meta.description} />
+  <meta name="keywords" content={meta.keywords} />
+  <meta name="author" content={meta.author} />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={meta.url} />
+  <meta property="og:title" content={meta.title} />
+  <meta property="og:description" content={meta.description} />
+  <meta property="og:image" content="https://roby-engineering.netlify.app/og-images/labs-overview.png" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content={meta.url} />
+  <meta property="twitter:title" content={meta.title} />
+  <meta property="twitter:description" content={meta.description} />
+  <meta property="twitter:image" content="https://roby-engineering.netlify.app/og-images/labs-overview.png" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href={meta.url} />
+  
+  <!-- Structured Data for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Dillan Roby",
+      "jobTitle": "Infrastructure Engineer & Full-Stack Developer",
+      "description": "A+ certified IT professional with hands-on experience in Active Directory, PowerShell automation, Linux administration, and full-stack web development.",
+      "url": "https://roby-engineering.netlify.app",
+      "sameAs": [
+        "https://github.com/DillanR1",
+        "https://www.linkedin.com/in/dillan-roby/"
+      ],
+      "knowsAbout": [
+        "Active Directory Domain Services",
+        "PowerShell Scripting",
+        "Windows Server Administration",
+        "Hyper-V Virtualization",
+        "Linux Server Administration",
+        "LAMP Stack Deployment",
+        "Network Configuration",
+        "IT Infrastructure Automation"
+      ],
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "certification",
+        "name": "CompTIA A+"
+      }
+    }
+  }
+  </script>
+  
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+
+<body>
+  <!-- FLOATING SKULL WATERMARK -->
+  <div class="skull-watermark">
+    <img src="/roby-skull.png" alt="" />
+  </div>
+
+  <!-- STICKY NAV -->
+  <nav class="sticky-nav visible">
+    <a href="/" class="nav-brand">Roby Engineering</a>
+    <div class="nav-links">
+      <a href="/#web-dev">Web Dev</a>
+      <a href="/labs" class="active">IT Labs</a>
+      <a href="/#certs">Certs</a>
+      <a href="/#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero labs-hero">
+    <h1>IT Infrastructure Labs</h1>
+    <p class="hero-subtitle">Enterprise-Grade Deployments. Documented. Automated. Battle-Tested.</p>
+    <p class="tagline">
+      <span class="latin">Built for Technical Hiring Managers & IT Recruiters</span>
+    </p>
+  </section>
+
+  <!-- RECRUITER HOOK -->
+  <section class="recruiter-section">
+    <div class="recruiter-hook">
+      <h2>For Recruiters: What These Labs Demonstrate</h2>
+      <div class="hook-grid">
+        <div class="hook-card">
+          <h3>🔧 Not Just "AD Experience"</h3>
+          <p><strong>Typical candidate:</strong> "I reset passwords in Active Directory Users & Computers."</p>
+          <p><strong>What I built:</strong> Complete domain infrastructure from bare-metal virtualization, with custom PowerShell automation, DNS/DHCP integration, and disaster recovery procedures.</p>
+        </div>
+        <div class="hook-card">
+          <h3>🐧 Production-Ready Linux</h3>
+          <p><strong>Typical candidate:</strong> "I've used Ubuntu desktop."</p>
+          <p><strong>What I deployed:</strong> Full LAMP stack on Ubuntu Server—Apache, MySQL, PHP—with security hardening, database configuration, and a working ticketing system.</p>
+        </div>
+        <div class="hook-card">
+          <h3>⚡ Automation-First Mindset</h3>
+          <p><strong>Typical candidate:</strong> Clicks through GUI wizards.</p>
+          <p><strong>What I scripted:</strong> PowerShell tooling with safety mechanisms, error handling, and idempotent deployment patterns. Infrastructure-as-Code principles in practice.</p>
+        </div>
+      </div>
+      <p class="hook-summary">
+        <strong>Translation:</strong> I don't just operate systems—I architect, deploy, automate, and document them. 
+        Whether the role is Help Desk, Jr. Sysadmin, IT Support Specialist, or Infrastructure Engineer, 
+        I've built the foundation from the ground up.
+      </p>
+    </div>
+  </section>
+
+  <!-- LAB CARDS -->
+  <section class="portfolio labs-portfolio">
+    <h2>Infrastructure Projects</h2>
+    
+    <div class="portfolio-grid">
+      <!-- ACTIVE DIRECTORY -->
+      <article class="card lab-card">
+        <div class="lab-header">
+          <span class="lab-badge">Flagship Lab</span>
+          <h3>Active Directory Domain Deployment</h3>
+        </div>
+        <p>Windows Server 2022 forest from scratch. PowerShell automation with safety mechanisms. Hyper-V networking, DNS/DHCP integration, user/group management, and comprehensive troubleshooting documentation.</p>
+        
+        <div class="skills-tags">
+          <span>Active Directory</span>
+          <span>PowerShell</span>
+          <span>Windows Server 2022</span>
+          <span>Hyper-V</span>
+          <span>DNS</span>
+          <span>DHCP</span>
+          <span>Group Policy</span>
+        </div>
+        
+        <div class="lab-links">
+          <a href="/labs/active-directory" class="cta-primary">Full Lab Guide</a>
+          <a href="https://github.com/DillanR1/Windows-Server-Active-Directory" target="_blank" rel="noopener" class="cta-secondary">GitHub Repo</a>
+        </div>
+      </article>
+      
+      <!-- OSTICKET -->
+      <article class="card lab-card">
+        <div class="lab-header">
+          <span class="lab-badge">Linux Focus</span>
+          <h3>osTicket on Linux (LAMP Stack)</h3>
+        </div>
+        <p>Full LAMP deployment on Ubuntu Server via Hyper-V. Apache web server, MySQL database, PHP configuration. Security hardening, file permissions, and a production-ready help desk ticketing system.</p>
+        
+        <div class="skills-tags">
+          <span>Linux (Ubuntu)</span>
+          <span>Apache</span>
+          <span>MySQL</span>
+          <span>PHP</span>
+          <span>Security Hardening</span>
+          <span>Hyper-V</span>
+        </div>
+        
+        <div class="lab-links">
+          <a href="/labs/osticket" class="cta-primary">Full Lab Guide</a>
+          <a href="https://github.com/DillanR1/osTicket-lab" target="_blank" rel="noopener" class="cta-secondary">GitHub Repo</a>
+        </div>
+      </article>
+      
+      <!-- WINDOWS 11 VM -->
+      <article class="card lab-card">
+        <div class="lab-header">
+          <span class="lab-badge">Virtualization</span>
+          <h3>Windows 11 Hyper-V Deployment</h3>
+        </div>
+        <p>Generation 2 VM with TPM 2.0 and Secure Boot. External virtual switch configuration, boot order management, WSL2 conflict resolution, and troubleshooting common Hyper-V networking issues.</p>
+        
+        <div class="skills-tags">
+          <span>Hyper-V</span>
+          <span>Windows 11</span>
+          <span>TPM/Secure Boot</span>
+          <span>Virtual Networking</span>
+          <span>Troubleshooting</span>
+        </div>
+        
+        <div class="lab-links">
+          <a href="/labs/windows11-vm" class="cta-primary">Full Lab Guide</a>
+          <a href="https://github.com/DillanR1/Hyper-V-Windows11-VM-Guide" target="_blank" rel="noopener" class="cta-secondary">GitHub Repo</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- SKILLS MATRIX -->
+  <section class="certs skills-matrix">
+    <h2>Technical Competencies</h2>
+    
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Systems Administration</h3>
+        <ul class="skill-list">
+          <li>Active Directory Domain Services</li>
+          <li>Windows Server 2022/2019</li>
+          <li>Linux Server (Ubuntu)</li>
+          <li>User & Group Management</li>
+          <li>Group Policy Objects</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Virtualization</h3>
+        <ul class="skill-list">
+          <li>Microsoft Hyper-V</li>
+          <li>Virtual Switch Configuration</li>
+          <li>VM Lifecycle Management</li>
+          <li>Checkpoint & Backup Strategies</li>
+          <li>Resource Allocation</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Scripting & Automation</h3>
+        <ul class="skill-list">
+          <li>PowerShell 7</li>
+          <li>Bash Scripting</li>
+          <li>Python Automation</li>
+          <li>Error Handling & Safety Mechanisms</li>
+          <li>Infrastructure-as-Code Principles</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Networking</h3>
+        <ul class="skill-list">
+          <li>TCP/IP Configuration</li>
+          <li>DNS & DHCP Services</li>
+          <li>Virtual Switch Architecture</li>
+          <li>Firewall Rules</li>
+          <li>Network Troubleshooting</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="certs">
+    <h2>Certifications</h2>
+    <ul>
+      <li><strong>CompTIA A+</strong> — Hardware/Software Troubleshooting, Networking Fundamentals, Security Basics</li>
+      <li><strong>In Progress:</strong> CompTIA Network+, CompTIA Security+</li>
+    </ul>
+  </section>
+
+  <!-- CTA -->
+  <section class="contact labs-cta">
+    <h2>Let's Talk Infrastructure</h2>
+    <p>Looking for a candidate who can hit the ground running? I've already built the labs that prove I can do the work.</p>
+    <div class="cta-buttons">
+      <a href="/#contact" class="cta-primary">Get in Touch</a>
+      <a href="https://github.com/DillanR1" target="_blank" rel="noopener" class="cta-secondary">View All Projects on GitHub</a>
+    </div>
+  </section>
+
+  <style>
+    /* SKULL WATERMARK */
+    .skull-watermark {
+      position: fixed;
+      top: 60vh;
+      right: -8%;
+      width: 500px;
+      opacity: 0.05;
+      z-index: -1;
+      pointer-events: none;
+      animation: skull-drift 25s ease-in-out infinite;
+    }
+    
+    .skull-watermark img {
+      width: 100%;
+      filter: drop-shadow(0 0 80px rgba(255, 102, 0, 0.25));
+    }
+    
+    @keyframes skull-drift {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.05; }
+      50% { transform: translate(-30px, -40px) rotate(3deg); opacity: 0.07; }
+    }
+    
+    /* STICKY NAV - Always visible on labs pages */
+    .sticky-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0.75rem 2rem;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(255, 102, 0, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      transform: translateY(0);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      box-sizing: border-box;
+    }
+    
+    .nav-brand {
+      font-weight: 700;
+      color: #fff;
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-brand:hover {
+      color: #ff6600;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .nav-links a.active {
+      color: #ff6600;
+    }
+    
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #ff6600;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ff6600;
+    }
+    
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+    
+    /* HERO ADJUSTMENTS FOR NAV */
+    .labs-hero {
+      margin-top: 4rem;
+      padding-top: 3rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.3rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin: 0.5rem 0 1rem 0;
+      font-weight: 400;
+    }
+    
+    .tagline .latin {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ff6600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    
+    /* RECRUITER SECTION */
+    .recruiter-section {
+      max-width: 80rem;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    
+    .recruiter-hook {
+      background: rgba(255, 102, 0, 0.05);
+      border: 1px solid rgba(255, 102, 0, 0.2);
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+    }
+    
+    .recruiter-hook h2 {
+      color: #ff6600;
+      margin-top: 0;
+      font-size: 1.75rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .recruiter-hook h2::after {
+      display: none;
+    }
+    
+    .hook-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .hook-card {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 1.5rem;
+    }
+    
+    .hook-card h3 {
+      color: #fff;
+      font-size: 1.1rem;
+      margin: 0 0 1rem 0;
+    }
+    
+    .hook-card p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 0.5rem 0;
+    }
+    
+    .hook-card strong {
+      color: #ff6600;
+    }
+    
+    .hook-summary {
+      text-align: center;
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.7;
+      margin: 0;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .hook-summary strong {
+      color: #ff6600;
+    }
+    
+    /* LAB CARDS */
+    .labs-portfolio {
+      text-align: center;
+    }
+    
+    .lab-card {
+      text-align: left;
+    }
+    
+    .lab-header {
+      margin-bottom: 1rem;
+    }
+    
+    .lab-badge {
+      display: inline-block;
+      background: rgba(255, 102, 0, 0.2);
+      border: 1px solid rgba(255, 102, 0, 0.4);
+      color: #ff6600;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.75rem;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .lab-header h3 {
+      color: #fff;
+      font-size: 1.4rem;
+      margin: 0.5rem 0 0 0;
+    }
+    
+    .lab-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .lab-links .cta-primary,
+    .lab-links .cta-secondary {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.85rem;
+      text-align: center;
+      flex: 1;
+      min-width: 140px;
+    }
+    
+    /* SKILLS MATRIX */
+    .skills-matrix .skills-grid {
+      text-align: left;
+    }
+    
+    .skill-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0 0;
+    }
+    
+    .skill-list li {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95rem;
+      padding: 0.4rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    
+    .skill-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #ff6600;
+    }
+    
+    /* LABS CTA */
+    .labs-cta {
+      text-align: center;
+      max-width: 700px;
+    }
+    
+    .labs-cta p {
+      font-size: 1.15rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 1.5rem;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .cta-primary, .cta-secondary {
+      padding: 1rem 2rem;
+      border-radius: 0.75rem;
+      text-decoration: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      font-size: 0.95rem;
+    }
+    
+    .cta-primary {
+      background: linear-gradient(135deg, rgba(255, 102, 0, 0.3), rgba(255, 102, 0, 0.4));
+      border: 1px solid rgba(255, 102, 0, 0.5);
+      color: #ff6600;
+    }
+    
+    .cta-primary:hover {
+      background: linear-gradient(135deg, rgba(255, 102, 0, 0.4), rgba(255, 102, 0, 0.5));
+      box-shadow: 0 0 40px rgba(255, 102, 0, 0.4);
+      transform: translateY(-2px);
+    }
+    
+    .cta-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+    
+    .cta-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: translateY(-2px);
+    }
+    
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .sticky-nav {
+        padding: 0.6rem 1rem;
+      }
+      
+      .nav-links {
+        gap: 0.75rem;
+      }
+      
+      .nav-links a {
+        font-size: 0.8rem;
+      }
+      
+      .labs-hero {
+        margin-top: 3.5rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .recruiter-hook {
+        padding: 1.5rem;
+      }
+      
+      .hook-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .lab-links {
+        flex-direction: column;
+      }
+      
+      .cta-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      .skull-watermark {
+        width: 350px;
+        right: -15%;
+      }
+    }
+  </style>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        // Only handle same-page anchors
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

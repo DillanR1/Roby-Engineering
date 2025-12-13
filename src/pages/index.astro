@@ -1,36 +1,45 @@
 ---
-// index.astro - POLISHED PHASE 1 - FIXED
+// index.astro - HOMEPAGE "LOBBY" with clear funneling to dedicated pages
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="grammarly" content="false" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dillan Roby | Infrastructure Engineer & Full-Stack Developer</title>
-  <meta name="description" content="A+ certified IT professional specializing in Active Directory, PowerShell automation, and full-stack web development. View my infrastructure labs and web projects." />
+  <meta name="description" content="A+ certified IT professional specializing in Active Directory, PowerShell automation, and full-stack web development. Explore my infrastructure labs and web development projects." />
+  <meta name="keywords" content="Dillan Roby, infrastructure engineer, full-stack developer, Active Directory, PowerShell, React, Astro, IT portfolio, web developer portfolio, CompTIA A+" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://roby-engineering.netlify.app/" />
+  <meta property="og:title" content="Dillan Roby | Infrastructure Engineer & Full-Stack Developer" />
+  <meta property="og:description" content="A+ certified IT professional. Explore my infrastructure labs and web development projects." />
+  <meta property="og:image" content="https://roby-engineering.netlify.app/og-images/homepage.png" />
+  
+  <link rel="canonical" href="https://roby-engineering.netlify.app/" />
   <link rel="stylesheet" href="/styles/global.css" />
 </head>
 
 <body>
-  <!-- FLOATING SKULL WATERMARK - Positioned below fold, behind content -->
+  <!-- FLOATING SKULL WATERMARK -->
   <div class="skull-watermark">
     <img src="/roby-skull.png" alt="" />
   </div>
 
   <!-- STICKY NAV -->
   <nav class="sticky-nav">
-    <div class="nav-brand">Roby Engineering</div>
+    <a href="/" class="nav-brand">Roby Engineering</a>
     <div class="nav-links">
-      <a href="#web-dev">Web Dev</a>
-      <a href="#labs">IT Labs</a>
+      <a href="/projects">Dev</a>
+      <a href="/labs">IT Labs</a>
       <a href="#certs">Certs</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
 
-  <!-- HERO: Clean, No Redundancy -->
+  <!-- HERO -->
   <section class="hero">
     <h1>Dillan Roby</h1>
     <h2>Infrastructure Engineer & Full-Stack Developer</h2>
@@ -38,84 +47,106 @@
       <span class="latin">Vis per Scientiam</span>
     </p>
     <div class="cta-buttons">
-      <a href="#labs" class="cta-primary">IT Labs</a>
-      <a href="#web-dev" class="cta-secondary">Web Projects</a>
+      <a href="/labs" class="cta-primary">IT Labs</a>
+      <a href="/projects" class="cta-secondary">Web Projects</a>
     </div>
   </section>
 
-  <!-- WEB DEVELOPMENT SECTION -->
+  <!-- WEB DEVELOPMENT SECTION - LOBBY VIEW -->
   <section id="web-dev" class="portfolio">
-    <h2>Web Development</h2>
+    <div class="section-header">
+      <span class="section-label">Featured Work</span>
+      <h2>Web Development</h2>
+      <p class="section-teaser">Production sites, client projects, and development tools</p>
+    </div>
+    
     <div class="portfolio-grid">
-      <div class="card">
+      <div class="card preview-card">
         <h3>TVQMA Race League</h3>
-        <p>Full-stack React app: race schedules, live results, CSV uploads. Vite, Router, Bootstrap 5. <strong>Lighthouse 90+</strong>.</p>
-        <div class="tech-stack">React • Vite • Bootstrap • CSV Parser</div>
+        <p>Full-stack React app with live race results, CSV data management, and responsive design.</p>
+        <div class="tech-stack">React • Vite • Bootstrap</div>
         <a href="https://tvqma-demo.netlify.app" target="_blank" rel="noopener">Live Demo</a>
       </div>
       
-      <div class="card">
-        <h3>Rollins Racing Sponsor Site</h3>
-        <p>Astro + TinaCMS + TypeScript. <strong>Headless CMS</strong> for non-tech client edits.</p>
+      <div class="card preview-card">
+        <h3>Rollins Racing</h3>
+        <p>Sponsor site with headless CMS for non-technical client editing.</p>
         <div class="tech-stack">Astro • TinaCMS • TypeScript</div>
         <a href="https://ava-rollins-racing.netlify.app/" target="_blank" rel="noopener">Live Site</a>
       </div>
       
-      <div class="card">
+      <div class="card preview-card">
         <h3>Network Port Scanner</h3>
-        <p>Python CLI tool for network reconnaissance. Multi-threaded scanning, port enumeration.</p>
-        <div class="tech-stack">Python • Socket Programming • Threading</div>
+        <p>Multi-threaded Python CLI for network reconnaissance and port enumeration.</p>
+        <div class="tech-stack">Python • Threading • Sockets</div>
         <a href="https://github.com/DillanR1/port-scanner" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
+    
+    <!-- EXPLORE FULL GALLERY CTA -->
+    <div class="explore-more">
+      <a href="/projects" class="explore-cta">
+        <span>Explore All Projects</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <p class="explore-hint">Full project breakdowns, tech stacks, and code deep-dives</p>
+    </div>
   </section>
 
-  <!-- IT INFRASTRUCTURE LABS -->
+  <!-- IT INFRASTRUCTURE LABS - LOBBY VIEW -->
   <section id="labs" class="portfolio">
-    <h2>IT Infrastructure Labs</h2>
-    <p class="section-intro">
-      Enterprise-grade deployments demonstrating systems administration, virtualization, and automation skills.
-      <strong>Built for technical hiring managers and IT recruiters.</strong>
-    </p>
+    <div class="section-header">
+      <span class="section-label">Featured Labs</span>
+      <h2>IT Infrastructure</h2>
+      <p class="section-teaser">Enterprise-grade deployments for technical hiring managers</p>
+    </div>
     
     <div class="portfolio-grid">
-      <div class="card">
-        <h3>Active Directory Domain Deployment</h3>
-        <p>Windows Server 2022 forest configuration, PowerShell automation, Hyper-V networking, DNS/DHCP integration.</p>
+      <div class="card preview-card">
+        <h3>Active Directory Domain</h3>
+        <p>Windows Server 2022 forest with PowerShell automation, DNS/DHCP, and full documentation.</p>
         <div class="skills-tags">
           <span>Active Directory</span>
           <span>PowerShell</span>
           <span>Hyper-V</span>
-          <span>Windows Server</span>
-          <span>DNS/DHCP</span>
         </div>
         <a href="/labs/active-directory">View Lab</a>
       </div>
       
-      <div class="card">
-        <h3>osTicket on Linux (LAMP Stack)</h3>
-        <p>Full LAMP deployment: Ubuntu Server, Apache, MySQL, PHP. Database security, web server hardening.</p>
+      <div class="card preview-card">
+        <h3>osTicket LAMP Stack</h3>
+        <p>Ubuntu Server deployment with Apache, MySQL, PHP, and security hardening.</p>
         <div class="skills-tags">
           <span>Linux</span>
           <span>Apache</span>
           <span>MySQL</span>
-          <span>PHP</span>
-          <span>Security Hardening</span>
         </div>
         <a href="/labs/osticket">View Lab</a>
       </div>
       
-      <div class="card">
-        <h3>Windows 11 Hyper-V Deployment</h3>
-        <p>Generation 2 VM with TPM/Secure Boot, external networking, boot order management, WSL2 conflict resolution.</p>
+      <div class="card preview-card">
+        <h3>Windows 11 Hyper-V</h3>
+        <p>Gen 2 VM with TPM, Secure Boot, and virtual networking troubleshooting.</p>
         <div class="skills-tags">
           <span>Hyper-V</span>
           <span>Windows 11</span>
           <span>Virtualization</span>
-          <span>Troubleshooting</span>
         </div>
         <a href="/labs/windows11-vm">View Lab</a>
       </div>
+    </div>
+    
+    <!-- EXPLORE FULL GALLERY CTA -->
+    <div class="explore-more">
+      <a href="/labs" class="explore-cta">
+        <span>Explore All Labs</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <p class="explore-hint">Full lab guides, recruiter context, and technical deep-dives</p>
     </div>
   </section>
 
@@ -142,7 +173,7 @@
       </div>
       <div class="skill-category">
         <h3>Networking</h3>
-        <p>TCP/IP, DNS, DHCP, Firewall configuration, Virtual switches, Network troubleshooting</p>
+        <p>TCP/IP, DNS, DHCP, Firewall configuration, Virtual switches</p>
       </div>
     </div>
   </section>
@@ -159,14 +190,14 @@
   </section>
 
   <style>
-    /* SKULL WATERMARK - Below fold, behind all content */
+    /* SKULL WATERMARK */
     .skull-watermark {
       position: fixed;
-      top: 90vh; /* Start below the fold - user must scroll to see it */
+      top: 90vh;
       right: -5%;
       width: 450px;
       opacity: 0.06;
-      z-index: -1; /* Behind everything */
+      z-index: -1;
       pointer-events: none;
       animation: skull-drift 25s ease-in-out infinite;
     }
@@ -177,17 +208,11 @@
     }
     
     @keyframes skull-drift {
-      0%, 100% { 
-        transform: translate(0, 0) rotate(0deg); 
-        opacity: 0.06;
-      }
-      50% { 
-        transform: translate(-30px, -40px) rotate(3deg); 
-        opacity: 0.08;
-      }
+      0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.06; }
+      50% { transform: translate(-30px, -40px) rotate(3deg); opacity: 0.08; }
     }
     
-    /* STICKY NAV - Fixed spacing */
+    /* STICKY NAV */
     .sticky-nav {
       position: fixed;
       top: 0;
@@ -217,13 +242,17 @@
       color: #fff;
       font-size: 1.2rem;
       letter-spacing: 0.5px;
-      white-space: nowrap;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-brand:hover {
+      color: #ff6600;
     }
     
     .nav-links {
       display: flex;
       gap: 1.5rem;
-      flex-shrink: 0;
     }
     
     .nav-links a {
@@ -233,7 +262,6 @@
       font-size: 0.9rem;
       transition: all 0.3s ease;
       position: relative;
-      white-space: nowrap;
     }
     
     .nav-links a::after {
@@ -255,7 +283,7 @@
       width: 100%;
     }
     
-    /* TAGLINE - Jazzed up */
+    /* TAGLINE */
     .tagline {
       margin-top: 1rem;
     }
@@ -264,14 +292,12 @@
       font-size: 1.4rem;
       font-weight: 500;
       font-style: italic;
-      color: rgba(255, 255, 255, 0.9);
       letter-spacing: 0.15em;
       text-transform: uppercase;
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 102, 0, 0.9));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      text-shadow: none;
       display: inline-block;
       padding: 0.5rem 0;
       border-top: 1px solid rgba(255, 102, 0, 0.3);
@@ -322,6 +348,104 @@
       transform: translateY(-2px);
     }
     
+    /* SECTION HEADERS - "LOBBY VIEW" STYLING */
+    .section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .section-label {
+      display: inline-block;
+      background: rgba(255, 102, 0, 0.15);
+      border: 1px solid rgba(255, 102, 0, 0.3);
+      color: #ff6600;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.35rem 1rem;
+      border-radius: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .section-header h2 {
+      margin: 0.5rem 0;
+    }
+    
+    .section-teaser {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.1rem;
+      margin: 0;
+    }
+    
+    /* PREVIEW CARDS - subtle indicator these are summaries */
+    .preview-card {
+      position: relative;
+    }
+    
+    .preview-card::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, rgba(255, 102, 0, 0.3), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .preview-card:hover::after {
+      opacity: 1;
+    }
+    
+    /* EXPLORE MORE CTA */
+    .explore-more {
+      text-align: center;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .explore-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, rgba(255, 102, 0, 0.15), rgba(255, 102, 0, 0.25));
+      border: 2px solid rgba(255, 102, 0, 0.5);
+      border-radius: 3rem;
+      color: #ff6600;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: all 0.3s ease;
+    }
+    
+    .explore-cta:hover {
+      background: linear-gradient(135deg, rgba(255, 102, 0, 0.25), rgba(255, 102, 0, 0.35));
+      border-color: #ff6600;
+      box-shadow: 0 0 30px rgba(255, 102, 0, 0.4);
+      transform: translateY(-2px);
+    }
+    
+    .explore-cta svg {
+      transition: transform 0.3s ease;
+    }
+    
+    .explore-cta:hover svg {
+      transform: translateX(4px);
+    }
+    
+    .explore-hint {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.9rem;
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
+    
     /* PORTFOLIO GRID */
     .portfolio-grid {
       display: grid;
@@ -350,13 +474,13 @@
       border-radius: 0.5rem;
       color: #ff8833;
       font-weight: 600;
+      font-size: 0.8rem;
       transition: all 0.3s ease;
     }
     
     .skills-tags span:hover {
       background: rgba(255, 102, 0, 0.25);
       border-color: rgba(255, 102, 0, 0.5);
-      transform: translateY(-2px);
     }
     
     /* SKILLS GRID */
@@ -365,6 +489,7 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
       margin-top: 2rem;
+      text-align: left;
     }
     
     .skill-category {
@@ -395,21 +520,7 @@
       font-size: 1rem;
     }
     
-    /* SECTION INTRO */
-    .section-intro {
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto 2rem auto;
-      font-size: 1.15rem;
-      color: rgba(255, 255, 255, 0.85);
-      line-height: 1.7;
-    }
-    
-    .section-intro strong {
-      color: #ff6600;
-    }
-    
-    /* MOBILE OPTIMIZATIONS */
+    /* MOBILE */
     @media (max-width: 768px) {
       .skull-watermark {
         width: 300px;
@@ -454,6 +565,20 @@
       .skills-grid {
         grid-template-columns: 1fr;
       }
+      
+      .section-teaser {
+        font-size: 1rem;
+      }
+      
+      .explore-cta {
+        font-size: 1rem;
+        padding: 0.9rem 1.5rem;
+      }
+      
+      .explore-hint {
+        font-size: 0.85rem;
+        padding: 0 1rem;
+      }
     }
     
     @media (max-width: 480px) {
@@ -472,20 +597,21 @@
       .nav-brand {
         font-size: 0.9rem;
       }
+      
+      .section-label {
+        font-size: 0.7rem;
+      }
     }
   </style>
 
   <script>
-    // Smooth scroll for anchor links
+    // Smooth scroll for same-page anchors only
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       });
     });
@@ -494,11 +620,7 @@
     const nav = document.querySelector('.sticky-nav');
     window.addEventListener('scroll', () => {
       if (nav) {
-        if (window.scrollY > 200) {
-          nav.classList.add('visible');
-        } else {
-          nav.classList.remove('visible');
-        }
+        nav.classList.toggle('visible', window.scrollY > 200);
       }
     });
   </script>
