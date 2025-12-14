@@ -1,6 +1,16 @@
 /* src/styles/global.css - SPY Glass UI: Black/White/Orange */
 
 /* ==================== BASE LAYER - DEEP BLACK ==================== */
+
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
 body {
   background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #1a1a1a 100%);
   color: #ffffff;
