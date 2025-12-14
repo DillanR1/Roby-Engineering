@@ -19,6 +19,7 @@ const meta = {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
+  
   <!-- Primary Meta Tags -->
   <title>{meta.title}</title>
   <meta name="title" content={meta.title} />
@@ -644,21 +645,22 @@ const meta = {
     }
   </style>
 
-  <script>
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        // Only handle same-page anchors
-        if (href.startsWith('#')) {
-          e.preventDefault();
-          const target = document.querySelector(href);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
+<script>
+  // Smooth scroll for anchor links
+  document.querySelectorAll<HTMLAnchorElement>('a[href^="#"], a[href^="/#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      const href = anchor.getAttribute('href');
+      
+      // Only handle same-page fragment anchors (starting with #)
+      if (href?.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      });
+      }
     });
-  </script>
+  });
+</script>
 </body>
 </html>
